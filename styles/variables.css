@@ -2,3 +2,17 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --page-bg-color: #000028; /* Фон страницы */
+  --page-decor-color: #ff0070; /* Декор страницы */
+  --menu-color: #ff0070; /* Меню */
+  --menu-hover-color: rgba(255, 0, 112, 0.4); /* Обводка при ховере */
+  --accent-color: #ff0070; /* Тень, фон заголовков */
+  --first-title-color: #db00ff; /* Заголовок header, footer */
+  --second-title-color: #ff0070; /* Подзаголовок 2 уровня */
+  --subtitle-color: #000028; /* Подзаголовки 3 и 4 уровня */
+  --text-color: #f1b2ce; /* Текст */
+  --background-image: url(../images/cover-image-dark.png);
+  --font-family: "IBM Plex Mono", "Arial", sans-serif;
+  --indent: clamp(10px, 2.65vw, 20px);
+}

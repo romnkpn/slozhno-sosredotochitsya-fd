@@ -6,13 +6,28 @@
   --page-bg-color: #000028; /* Фон страницы */
   --page-decor-color: #ff0070; /* Декор страницы */
   --menu-color: #ff0070; /* Меню */
-  --menu-hover-color: rgba(255, 0, 112, 0.4); /* Обводка при ховере */
-  --accent-color: #ff0070; /* Тень, фон заголовков */
-  --first-title-color: #db00ff; /* Заголовок header, footer */
-  --second-title-color: #ff0070; /* Подзаголовок 2 уровня */
-  --subtitle-color: #000028; /* Подзаголовки 3 и 4 уровня */
+  --menu-hover-color: rgba(255, 0, 112, 0.4); /* Обводка при наведении */
+  --first-title-color: #db00ff; /* Заголовок - header, footer */
+  --text-accent-color: #ff0070; /* Тени/фон в заголовках и ссылке */
+  --second-title-color: #ff0070; /* Заголовки секций */
+  --subtitle-color: #000028; /* Подзаголовки */
   --text-color: #f1b2ce; /* Текст */
-  --background-image: url(../images/cover-image-dark.png);
-  --font-family: "IBM Plex Mono", "Arial", sans-serif;
+  --background-image: url(../images/cover-image-dark.png); /* Фоновая пикча */
+
+  --regular-font-family: "IBM Plex Mono", "Arial", monospace; /* Семейства шрифтов */
+  --regular-font-size: 18px;
+  --normal-font-weight: 400;
+  --bold-font-weight: 700;
+
   --indent: clamp(10px, 2.65vw, 20px);
+}
+
+/* Отклчаем REC в авто */
+.theme-auto .header__decorated::before {
+  display: none;
+}
+
+/* Отклчаем точку в авто */
+.theme-auto .header__decorated::after {
+  display: none;
 }

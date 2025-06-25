@@ -3,9 +3,6 @@
 /* body */
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 18px;
   background-color: var(--page-bg-color);
   background-image: var(--background-image);
   background-repeat: no-repeat;
@@ -14,30 +11,29 @@
   background-attachment: fixed;
 }
 
-/* Вся шапка */
+/* Шапка */
 .header {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   padding: var(--indent);
   block-size: 100vh;
 }
 
-/* Уголок верх-право */
+/* Уголки верх-право */
 .decorated-zone::before {
-content: '';
-position: absolute;
-top: var(--indent);
-right: var(--indent);
-width: 25px;
-height: 25px;
-border-top: 1px solid var(--accent-color);
-border-right: 1px solid var(--accent-color);
+  content: '';
+  position: absolute;
+  top: var(--indent);
+  right: var(--indent);
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--page-decor-color);
+  border-right: 1px solid var(--page-decor-color);
 }
 
-/* Уголок низ-лево */
+/* Уголки низ-лево */
 .decorated-zone::after {
   content: '';
   position: absolute;
@@ -45,11 +41,11 @@ border-right: 1px solid var(--accent-color);
   left: var(--indent);
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--page-decor-color);
+  border-left: 1px solid var(--page-decor-color);
 }
 
-/* РЕК */
+/* Область надписи REC */
 .header__decorated {
   position: absolute;
   top: calc(var(--indent) - 10px);
@@ -57,89 +53,135 @@ border-right: 1px solid var(--accent-color);
   display: flex;
   justify-self: flex-end;
   width: 10px;
-  color: var(--accent-color);
-  font-family: var(--font-family);
-  font-weight: 400;
+  color: var(--page-decor-color);
+  font-family: var(--regular-font-family);
+  font-weight: var(--normal-font-weight);
+  font-size: var(--regular-font-size);
+  line-height: 140%;
   text-transform: uppercase;
 }
 
-/* РЕК */
+/* Надпись */
 .header__decorated::before {
   content: 'rec';
   margin-top: 10px;
-  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
-/* РЕК */
+/* Точка */
 .header__decorated::after {
   content: '';
   position: absolute;
   margin-top: 18px;
   margin-left: 42px;
   border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color);
-  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--page-decor-color);
+  background-color: var(--page-decor-color);
   inline-size: 9px;
   block-size: 9px;
 }
 
-/* Меню */
+/* Позиция меню */
 .header__theme-menu {
   justify-self: flex-end;
 }
 
+/* Список кнопок */
 .header__theme-menu-list {
   display: grid;
   gap: 10px;
 }
 
+/* Кнопки */
 .header__theme-menu-button {
-  border: none;
-  padding: 4px 13px;
+  border: 1px solid transparent;
+  padding: 1.5px 13px;
   color: var(--menu-color);
-  font-family: var(--font-family);
-  font-size: 18px;
-  line-height: 100%;
+  font-family: var(--regular-font-family);
+  font-weight: var(--normal-font-weight);
+  font-size: var(--regular-font-size);
+  line-height: 116%;
   text-transform: lowercase;
   background-color: transparent;
   cursor: pointer;
 }
 
+/* Активная кнопка */
 .header__theme-menu-button_active {
   border: 1px solid var(--menu-color);
   pointer-events: none;
 }
 
+/* Сброс обводки для фокуса с мышки */
 .header__theme-menu-button:focus {
   outline: none;
 }
 
+/* Для фокуса с клиатуры */
 .header__theme-menu-button:focus-visible {
-  border: none;
   border-bottom: 1px solid var(--menu-color);
-  outline: none;
 }
 
-.header__theme-menu-button:hover:not(.header__theme-menu-button_active) {
+/* При наведении */
+.header__theme-menu-button:hover {
   border: 1px solid var(--menu-hover-color);
 }
 
 /* Заголовок шапки */
 .header__title {
   color: var(--first-title-color);
-  font-family: var(--font-family);
-  font-weight: 700;
+  font-family: var(--regular-font-family);
+  font-weight: var(--bold-font-weight);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--text-accent-color);
 }
 
-/* Описание шапки */
+/* Описание в шапке */
 .header__description {
   color: var(--subtitle-color);
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 18px;
+  font-family: var(--regular-font-family);
+  font-weight: var(--bold-font-weight);
+  font-size: var(--regular-font-size);
   line-height: 23.4px;
-  background-color: var(--accent-color);
+  background-color: var(--text-accent-color);
+}
+
+/* Контент */
+.main {
+  margin-right: var(--indent);
+  margin-left: var(--indent);
+}
+
+/* Заголовки секций */
+.second-title {
+  color: var(--second-title-color);
+  font-family: var(--regular-font-family);
+  font-weight: var(--bold-font-weight);
+  font-size: var(--regular-font-size);
+  line-height: 23.4px;
+}
+
+/* Подзаголовки секций */
+.article__title, .precept__title-subtitle, .gallary__title {
+  color: var(--subtitle-color);
+  font-family: var(--regular-font-family);
+  font-weight: var(--bold-font-weight);
+  font-size: var(--regular-font-size);
+  line-height: 23.4px;
+  background-color: var(--text-accent-color);
+}
+
+/* Переопределение для подзаголовков в секции precept */
+.precept__article-subtitle {
+  font-weight: var(--normal-font-weight);
+}
+
+/* Текст в секциях */
+.article__text {
+  color: var(--text-color);
+  font-family: var(--regular-font-family);
+  font-weight: var(--normal-font-weight);
+  font-size: var(--regular-font-size);
+  line-height: 23.4px;
 }

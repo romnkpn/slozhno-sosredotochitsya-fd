@@ -13,8 +13,8 @@
   --page-decor-color: #353430;
   --menu-color: #353430;
   --menu-hover-color: rgba(50, 49, 45, 0.4);
-  --accent-color: #ff8dcb;
   --first-title-color: #ffc2e6;
+  --text-accent-color: #ff8dcb;
   --second-title-color: #353430;
   --subtitle-color: #353430;
   --text-color: #353430;
@@ -27,8 +27,8 @@
     --page-decor-color: #353430;
     --menu-color: #353430;
     --menu-hover-color: rgba(50, 49, 45, 0.4);
-    --accent-color: #ff8dcb;
     --first-title-color: #ffc2e6;
+    --text-accent-color: #ff8dcb;
     --second-title-color: #353430;
     --subtitle-color: #353430;
     --text-color: #353430;
@@ -40,10 +40,12 @@
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
+/* Отклчаем REC в светлой теме */
 .theme-light .header__decorated::before {
   display: none;
 }
 
+/* Отклчаем точку в светлой теме */
 .theme-light .header__decorated::after {
   display: none;
 }

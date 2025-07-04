@@ -40,12 +40,12 @@
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
-/* Отклчаем REC в светлой теме */
+/* Отключаем REC в светлой теме */
 .theme-light .header__decorated::before {
   display: none;
 }
 
-/* Отклчаем точку в светлой теме */
+/* Отключаем точку в светлой теме */
 .theme-light .header__decorated::after {
   display: none;
 }

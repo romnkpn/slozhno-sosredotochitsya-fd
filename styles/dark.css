@@ -24,3 +24,21 @@
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
+
+@media (prefers-color-scheme: dark) {
+  .header__decorated::before {
+    display: inline-block;
+  }
+
+  .header__decorated::after {
+    display: inline-block;
+  }
+}
+
+.theme-dark .header__decorated::before {
+  display: inline-block;
+}
+
+.theme-dark .header__decorated::after {
+  display: inline-block;
+}

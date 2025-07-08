@@ -7,9 +7,9 @@
   --page-decor-color: #ff0070; /* Декор страницы */
   --menu-color: #ff0070; /* Меню */
   --menu-hover-color: rgba(255, 0, 112, 0.4); /* Обводка при наведении */
-  --first-title-color: #db00ff; /* Заголовок - header, footer */
+  --header-title-color: #db00ff; /* Заголовок - header, footer */
   --text-accent-color: #ff0070; /* Тени/фон в заголовках и ссылке */
-  --second-title-color: #ff0070; /* Заголовки секций */
+  --section-title-color: #ff0070; /* Заголовки секций */
   --subtitle-color: #000028; /* Подзаголовки */
   --text-color: #f1b2ce; /* Текст */
   --background-image: url(../images/cover-image-dark.png); /* Фоновая пикча */

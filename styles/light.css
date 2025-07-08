@@ -13,9 +13,9 @@
   --page-decor-color: #353430;
   --menu-color: #353430;
   --menu-hover-color: rgba(50, 49, 45, 0.4);
-  --first-title-color: #ffc2e6;
+  --header-title-color: #ffc2e6;
   --text-accent-color: #ff8dcb;
-  --second-title-color: #353430;
+ --section-title-color: #353430;
   --subtitle-color: #353430;
   --text-color: #353430;
   --background-image: url(../images/cover-image-light.png);
@@ -27,17 +27,13 @@
     --page-decor-color: #353430;
     --menu-color: #353430;
     --menu-hover-color: rgba(50, 49, 45, 0.4);
-    --first-title-color: #ffc2e6;
+    --header-title-color: #ffc2e6;
     --text-accent-color: #ff8dcb;
-    --second-title-color: #353430;
+    --section-title-color: #353430;
     --subtitle-color: #353430;
     --text-color: #353430;
     --background-image: url(../images/cover-image-light.png);
   }
-}
-
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
 /* Отключаем REC в светлой теме */

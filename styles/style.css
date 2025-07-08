@@ -3,12 +3,7 @@
 /* body */
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-color: var(--page-bg-color);
-  background-image: var(--background-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  background: var(--page-bg-color) var(--background-image) no-repeat fixed center / cover;
 }
 
 /* Шапка */
@@ -17,6 +12,7 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
+  min-height: 668px;
   margin-bottom: 40px;
   padding: var(--indent);
   block-size: 100vh;
@@ -55,7 +51,7 @@
   justify-self: flex-end;
   width: 10px;
   color: var(--page-decor-color);
-  font-family: var(--regular-font-family);
+  font-family: var(--regular-font-family), "Arial", monospace;
   font-weight: var(--normal-font-weight);
   font-size: var(--regular-font-size);
   line-height: 140%;
@@ -75,8 +71,8 @@
   content: '';
   position: absolute;
   display: none;
-  margin-top: 18px;
-  margin-left: 42px;
+  top: 18px;
+  left: 42px;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--page-decor-color);
   background-color: var(--page-decor-color);
@@ -100,7 +96,7 @@
   border: 1px solid transparent;
   padding: 1.5px 13px;
   color: var(--menu-color);
-  font-family: var(--regular-font-family);
+  font-family: var(--regular-font-family), "Arial", monospace;
   font-weight: var(--normal-font-weight);
   font-size: var(--regular-font-size);
   line-height: 116%;
@@ -132,8 +128,8 @@
 
 /* Заголовок шапки */
 .header__title {
-  color: var(--first-title-color);
-  font-family: var(--regular-font-family);
+  color: var(--header-title-color);
+  font-family: var(--regular-font-family), "Arial", monospace;
   font-weight: var(--bold-font-weight);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
@@ -143,7 +139,7 @@
 /* Описание в шапке */
 .header__description {
   color: var(--subtitle-color);
-  font-family: var(--regular-font-family);
+  font-family: var(--regular-font-family), "Arial", monospace;
   font-weight: var(--bold-font-weight);
   font-size: var(--regular-font-size);
   line-height: 23.4px;
@@ -169,8 +165,8 @@
 
 /* Заголовки секций */
 .second-title {
-  color: var(--second-title-color);
-  font-family: var(--regular-font-family);
+  color: var(--section-title-color);
+  font-family: var(--regular-font-family), "Arial", monospace;
   font-weight: var(--bold-font-weight);
   font-size: var(--regular-font-size);
   line-height: 23.4px;
@@ -179,7 +175,7 @@
 /* Подзаголовки секций */
 .article__title, .precept__title-subtitle, .gallary__title {
   color: var(--subtitle-color);
-  font-family: var(--regular-font-family);
+  font-family: var(--regular-font-family), "Arial", monospace;
   font-weight: var(--bold-font-weight);
   font-size: var(--regular-font-size);
   line-height: 23.4px;
@@ -207,7 +203,7 @@
 /* Текст в секциях */
 .article__text {
   color: var(--text-color);
-  font-family: var(--regular-font-family);
+  font-family: var(--regular-font-family), "Arial", monospace;
   font-weight: var(--normal-font-weight);
   font-size: var(--regular-font-size);
   line-height: 23.4px;
@@ -273,8 +269,8 @@
   align-items: center;
   height: 100%;
   margin-top: 32px;
-  color: var(--first-title-color);
-  font-family: var(--regular-font-family);
+  color: var(--header-title-color);
+  font-family: var(--regular-font-family), "Arial", monospace;
   font-weight: var(--bold-font-weight);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
@@ -299,7 +295,7 @@
   .preface {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: 'preface__title preface__container';
+    grid-template-areas: 'preface__title section__container';
     gap: 20px;
   }
 
@@ -311,7 +307,7 @@
   .precept {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: 'precept__title precept__container';
+    grid-template-areas: 'precept__title section__container';
     gap: 20px;
   }
 

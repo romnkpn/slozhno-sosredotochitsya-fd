@@ -184,7 +184,6 @@
 
 .article__title {
   margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 .precept__title-subtitle {
@@ -207,6 +206,7 @@
   font-weight: var(--normal-font-weight);
   font-size: var(--regular-font-size);
   line-height: 23.4px;
+  margin-top: 10px;
 }
 
 /* Ссылки в тексте */
@@ -292,23 +292,14 @@
     max-width:  364px;
   }
 
-  .preface {
-    display: grid;
+  .section:not(.reflection) {
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: 'preface__title section__container';
+    grid-template-areas: 'second-title section__container';
     gap: 20px;
   }
 
   .reflection {
-    display: grid;
     grid-template-columns: 1fr;
-  }
-
-  .precept {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 'precept__title section__container';
-    gap: 20px;
   }
 
   .preface, .reflection, .precept {
@@ -389,12 +380,11 @@
     max-width: 491px;
   }
 
-  .preface, .precept {
+  .section:not(.reflection) {
     gap: 10px;
   }
 
   .reflection {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr;
   }
